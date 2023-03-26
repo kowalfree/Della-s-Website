@@ -15,7 +15,7 @@
 .body .header .nav {
   height: 50px;
   width: 100%;
-  background-color: #e64856;
+  background-color: rgba(230, 72, 85, 0.9803921569);
   border-bottom: 1px solid black;
   z-index: 1;
   animation: move1 1s linear 1;
@@ -75,7 +75,7 @@
   }
   .body .header .nav .label .fas:hover {
     background-color: #f99d3a;
-    text-shadow: 1px 2px #e64856;
+    text-shadow: 1px 2px rgba(230, 72, 85, 0.9803921569);
   }
   .body .header .nav .label .fa-times {
     display: none;
@@ -104,7 +104,7 @@
   .body .header .nav .ul {
     display: none;
     flex-direction: column;
-    background-color: #e64856;
+    background-color: rgba(230, 72, 85, 0.9803921569);
     height: 200px;
     width: 40%;
     border: 1px solid black;
@@ -142,7 +142,7 @@
 }
 .body .header .nav .ul .li .a:hover {
   background-color: #f99d3a;
-  text-shadow: 1px 2px #e64856;
+  text-shadow: 1px 2px rgba(230, 72, 85, 0.9803921569);
   font-size: 13px;
 }
 .body .header .nav__lang {
@@ -179,7 +179,7 @@
 .body .header .nav .langBtn .divLang {
   display: none;
   width: 200px;
-  background-color: #e64856;
+  background-color: rgba(230, 72, 85, 0.9803921569);
 }
 .body .header .nav .langBtn .divLang .lang {
   list-style: none;
@@ -213,7 +213,7 @@
 }
 .body .header .nav .langBtn .divLang .lang .liLang:hover {
   background-color: #f99d3a;
-  text-shadow: 1px 2px #e64856;
+  text-shadow: 1px 2px rgba(230, 72, 85, 0.9803921569);
 }
 .body .header .nav .langBtn:focus,
 .body .header .nav .langBtn:hover {
@@ -291,12 +291,17 @@
   padding: 15px 10px;
   z-index: 0;
 }
+@media (max-width: 360px) {
+  .body .header .welcome .aside__btn {
+    padding: 10px;
+  }
+}
 .body .header .welcome .aside .sendBtn {
   display: block;
   width: 200px;
   font-size: 14px;
   color: white;
-  background-color: #e64856;
+  background-color: rgba(230, 72, 85, 0.9803921569);
   border: 1px solid white;
   border-radius: 0.5vw;
   text-shadow: 0px 0px 3px black;
@@ -308,6 +313,12 @@
   cursor: pointer;
   transition: 0.3s;
   animation: pulse 1s infinite;
+}
+@media (max-width: 360px) {
+  .body .header .welcome .aside .sendBtn {
+    width: 150px;
+    font-size: 12px;
+  }
 }
 .body .header .welcome .aside .sendBtn:hover {
   background-color: #cc2533;
@@ -341,7 +352,7 @@
 .body .header .welcome .aside .title {
   color: white;
   text-transform: uppercase;
-  text-shadow: 0px 0px 1vw #e64856;
+  text-shadow: 0px 0px 1vw rgba(230, 72, 85, 0.9803921569);
   font-size: 3.2vw;
   line-height: 2;
 }
@@ -358,7 +369,7 @@
   }
 }
 .body .header .welcome .aside .title-color {
-  color: #e64856;
+  color: rgba(230, 72, 85, 0.9803921569);
   text-shadow: 0px 0px 3vw white;
 }
 .body .header .welcome .aside .title-color .big {
@@ -978,7 +989,7 @@
   padding: 0 0.5vw 0 0.5vw;
 }
 .body .main .sec3 .level .box .levelDiv .fa-star {
-  color: #e64856;
+  color: rgba(230, 72, 85, 0.9803921569);
   font-size: 14px;
 }
 .body .main .sec3 .level .box .levelDiv__price {
@@ -992,7 +1003,7 @@
 }
 .body .main .sec3 .level .box .levelDiv:hover {
   background-color: #f8e6e6;
-  border: 1px solid #e64856;
+  border: 1px solid rgba(230, 72, 85, 0.9803921569);
 }
 .body .main .sec4 {
   display: flex;
@@ -1083,7 +1094,7 @@
   height: 40px;
   width: 80%;
   font-size: 14px;
-  background-color: #e64856;
+  background-color: rgba(230, 72, 85, 0.9803921569);
   border-radius: 4px;
   color: white;
   border: 1px solid black;
@@ -1128,21 +1139,21 @@
   }
 }
 .body .footer__contact {
-  margin-bottom: 55vh;
+  margin-bottom: 50vh;
 }
 @media (landscape) and (max-width: 480px) {
   .body .footer__contact {
-    margin-bottom: 38vh;
+    margin-bottom: 32vh;
   }
 }
 @media (portrait) and (max-width: 480px) {
   .body .footer__contact {
-    margin-bottom: 45vh;
+    margin-bottom: 35vh;
   }
 }
 .body .footer .contact {
   text-align: center;
-  width: 94%;
+  width: 70%;
 }
 @media (max-width: 480px) {
   .body .footer .contact {
@@ -1157,7 +1168,7 @@
   font-size: 40px;
 }
 .body .footer .contact .call .fa {
-  color: #e64856;
+  color: rgba(230, 72, 85, 0.9803921569);
 }
 .body .footer .contact .call .fa:hover {
   color: #cc2533;

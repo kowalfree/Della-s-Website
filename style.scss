@@ -7,7 +7,7 @@
 }
 
 //!variables:
-$first-color: #e64856;
+$first-color: #e64855fa;
 $second-color: #f99d3a;
 $third-color: rgb(236, 236, 236);
 $fourth-color: white;
@@ -312,6 +312,10 @@ $eighth-color: green;
 					margin: 5% auto 5% auto;
 					padding: 15px 10px;
 					z-index: 0;
+
+					@media (max-width: 360px) {
+						padding: 10px;
+					}
 				}
 
 				.sendBtn {
@@ -332,6 +336,11 @@ $eighth-color: green;
 					transition: 0.3s;
 
 					animation: pulse 1s infinite;
+
+					@media (max-width: 360px) {
+						width: 150px;
+						font-size: 12px;
+					}
 				}
 
 				.sendBtn:hover {
@@ -1119,20 +1128,20 @@ $eighth-color: green;
 		}
 
 		&__contact {
-			margin-bottom: 55vh;
+			margin-bottom: 50vh;
 
 			@media (landscape) and (max-width: 480px) {
-				margin-bottom: 38vh;
+				margin-bottom: 32vh;
 			}
 
 			@media (portrait) and (max-width: 480px) {
-				margin-bottom: 45vh;
+				margin-bottom: 35vh;
 			}
 		}
 
 		.contact {
 			text-align: center;
-			width: 94%;
+			width: 70%;
 
 			@media (max-width: 480px) {
 				line-height: 1.8;
