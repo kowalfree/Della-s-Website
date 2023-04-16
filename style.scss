@@ -31,6 +31,7 @@ $eighth-color: green;
 }
 
 .body {
+	max-width: 1920px;
 	//? Start-header
 
 	.header {
@@ -51,7 +52,7 @@ $eighth-color: green;
 
 			@keyframes move1 {
 				0% {
-					margin-top: -51px;
+					margin-top: -50px;
 				}
 
 				100% {
@@ -62,9 +63,8 @@ $eighth-color: green;
 			.input {
 				display: none;
 			}
-
 			.input:checked ~ .ul {
-				display: block;
+				right: 0;
 			}
 			.input:checked ~ .label .fa-bars {
 				display: none;
@@ -109,13 +109,13 @@ $eighth-color: green;
 			&__ul {
 				position: absolute;
 				top: 0;
-				right: 100px;
+				right: 0px;
 
 				@media (max-width: 640px) {
 					top: 49px;
-					right: 0;
-					left: 0;
+					right: -100%;
 					margin: 0 auto;
+					transition: 0.5s;
 				}
 			}
 
@@ -126,11 +126,11 @@ $eighth-color: green;
 				list-style: none;
 
 				@media (max-width: 640px) {
-					display: none;
+					justify-content: start;
 					flex-direction: column;
 					background-color: $first-color;
-					height: 200px;
-					width: 40%;
+					height: 250px;
+					width: 100%;
 					border: 1px solid $sixth-color;
 				}
 
@@ -159,89 +159,161 @@ $eighth-color: green;
 						font-size: 13px;
 					}
 				}
-			}
+				.langBtn {
+					display: flex;
+					justify-content: space-evenly;
+					align-items: center;
 
-			&__lang {
-				position: absolute;
-				right: 0;
-			}
-			.langBtn {
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
+					@include btnStyle;
 
-				@include btnStyle;
+					@media (max-width: 640px) {
+						height: 50px;
+						width: 100%;
+						display: flex;
+						justify-content: center;
+					}
 
-				.flag-round {
-					height: 35px;
-					border-radius: 50%;
-					box-shadow: 0px 0px 8px 2px $fourth-color;
-				}
+					.flag-round {
+						height: 35px;
+						border-radius: 50%;
+						box-shadow: 0px 0px 8px 2px $fourth-color;
 
-				&__div {
-					border: 1px solid $sixth-color;
-					position: absolute;
-					top: 49px;
-					right: 0px;
-				}
+						@media (max-width: 640px) {
+							margin-right: 15px;
+						}
+					}
 
-				.divLang {
-					display: none;
-					width: 200px;
-					background-color: $first-color;
+					&__div {
+						border: 1px solid $sixth-color;
+						position: absolute;
+						top: 49px;
+						right: 0px;
+						transform: translateX(100%);
 
-					.lang {
-						list-style: none;
+						@media (max-width: 640px) {
+							top: 96px;
+							right: 50%;
+							transform: translate(50%, 0);
+						}
+					}
 
-						&__li {
-							padding: 12px 0;
+					.divLang {
+						width: 200px;
+						background-color: $first-color;
+						z-index: -1;
+						transition: 0.5s;
+
+						@media (max-width: 640px) {
+							opacity: 0;
 						}
 
-						.liLang {
-							font-size: 14px;
+						.lang {
+							list-style: none;
 
-							.linkFlag {
-								display: flex;
-								align-items: center;
-								justify-content: left;
-								text-decoration: none;
-								color: $fourth-color;
-								transition: 0.3s;
-								text-transform: none;
-								text-shadow: 0px 0px 2px $sixth-color;
+							&__li {
+								padding: 12px 0;
+							}
 
-								&__img {
-									margin-left: 5px;
-									margin-right: 5px;
-								}
+							.liLang {
+								font-size: 14px;
 
-								.flag-square {
-									height: 26px;
-									margin-left: 15px;
-									margin-right: 15px;
-									border-radius: 3px;
-									box-shadow: 0px 0px 8px 3px $fourth-color;
+								.linkFlag {
+									display: flex;
+									align-items: center;
+									justify-content: left;
+									text-decoration: none;
+									color: $fourth-color;
+									transition: 0.3s;
+									text-transform: none;
+									text-shadow: 0px 0px 2px $sixth-color;
+
+									&__img {
+										margin-left: 5px;
+										margin-right: 5px;
+									}
+
+									.flag-square {
+										height: 26px;
+										margin-left: 15px;
+										margin-right: 15px;
+										border-radius: 3px;
+										box-shadow: 0px 0px 8px 3px $fourth-color;
+									}
 								}
 							}
-						}
 
-						.liLang:hover {
-							background-color: $second-color;
-							text-shadow: 1px 2px $first-color;
+							.liLang:hover {
+								background-color: $second-color;
+								text-shadow: 1px 2px $first-color;
+							}
 						}
 					}
 				}
-			}
-			.langBtn:focus,
-			.langBtn:hover {
-				font-size: 14px;
-				background-color: $second-color;
 
-				.divLang {
+				.langBtn:hover {
+					background-color: $second-color;
+					text-shadow: 1px 2px $first-color;
+
+					@media (max-width: 640px) {
+						background: none;
+						text-shadow: 0px 0px 3px $sixth-color;
+					}
+
+					.langBtn__div {
+						transform: translateX(0);
+
+						@media (max-width: 640px) {
+							transform: translateX(50%);
+						}
+					}
+				}
+				.inputLang {
+					display: none;
+				}
+				.inputLang:checked ~ .langBtn > .langBtn__div {
+					@media (max-width: 640px) {
+						transform: translate(50%, 100%);
+						opacity: 1;
+					}
+				}
+				.inputLang:checked ~ .labelLang .fa-square-caret-down {
+					display: none;
+				}
+				.inputLang:checked ~ .labelLang .fa-square-caret-up {
 					display: block;
+				}
+				.labelLang {
+					display: none;
+					height: 100%;
+					width: fit-content;
 
-					.liLang {
+					@media (max-width: 640px) {
 						display: block;
+						height: 49px;
+						position: absolute;
+						top: 198px;
+						right: 50%;
+						left: 50%;
+						transform: translateX(80%);
+
+						.fas {
+							@include btnStyle;
+
+							line-height: 49px;
+							vertical-align: middle;
+							text-align: center;
+							width: 56px;
+							font-size: 30px;
+						}
+
+						.fas:hover {
+							background-color: $second-color;
+							text-shadow: 1px 2px $first-color;
+						}
+
+						.fa-square-caret-up {
+							display: none;
+						}
 					}
 				}
 			}
@@ -857,14 +929,12 @@ $eighth-color: green;
 				height: 120vw;
 			}
 
-			@media (max-width: 480px) {
-				height: 240vw;
+			@media (max-width: 440px) {
+				height: 244vw;
 			}
-			@media (max-width: 420px) {
-				height: 300vw;
-			}
+
 			@media (max-width: 360px) {
-				height: 360vw;
+				height: 310vw;
 			}
 
 			&__offer {
@@ -873,6 +943,10 @@ $eighth-color: green;
 				@media (max-width: 900px) {
 					margin-bottom: 0vw;
 					margin-top: 8vw;
+				}
+				@media (max-width: 380px) {
+					margin-left: 3%;
+					margin-right: 3%;
 				}
 			}
 
@@ -892,12 +966,14 @@ $eighth-color: green;
 					width: 70vw;
 				}
 
+				@media (max-width: 900px) {
+					width: 80vw;
+				}
+
 				@media (max-width: 640px) {
-					width: 85vw;
+					width: 90vw;
 				}
-				@media (max-width: 480px) {
-					width: 92vw;
-				}
+
 				&__h2 {
 					margin-bottom: 2vw;
 					padding-top: 2vw;
@@ -919,8 +995,9 @@ $eighth-color: green;
 						flex-wrap: wrap;
 						justify-content: space-between;
 					}
-					@media (max-width: 480px) {
-						flex-direction: column;
+
+					@media (max-width: 560px) {
+						justify-content: center;
 					}
 
 					&__div {
@@ -928,41 +1005,31 @@ $eighth-color: green;
 
 						@media (max-width: 900px) {
 							margin-top: 6vw;
-						}
-
-						@media (max-width: 900px) {
-							margin-left: auto;
-							margin-right: auto;
+							margin-left: 3%;
+							margin-right: 3%;
 						}
 					}
 
 					.levelDiv {
-						height: 20vw;
-						width: 20vw;
+						height: 200px;
+						width: 200px;
 						border-radius: 50%;
 						background-color: $fourth-color;
 						border: 1px solid $sixth-color;
-						transition: 0.3s;
 
-						@media (max-width: 900px) {
-							height: 28vw;
-							width: 28vw;
+						@media (max-width: 560px) {
+							height: 174px;
+							width: 174px;
 						}
-
-						@media (max-width: 640px) {
-							height: 200px;
-							width: 200px;
-						}
-
 						.div__hard {
 							font-weight: bold;
 							font-size: 14px;
 						}
 
 						&__fa {
-							margin-top: 3vw;
-							margin-bottom: 2vw;
-							padding: 0 0.5vw 0 0.5vw;
+							margin-top: 20px;
+							margin-bottom: 20px;
+							padding: 0 2px 0 2px;
 						}
 						.fa-star {
 							color: $first-color;
@@ -982,9 +1049,123 @@ $eighth-color: green;
 						}
 					}
 
-					.levelDiv:hover {
-						background-color: #f8e6e6;
-						border: 1px solid $first-color;
+					.level1 {
+						animation: level1 8s ease infinite normal backwards running;
+
+						@keyframes level1 {
+							0% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							25% {
+								background-color: #f8e6e6;
+								border: 1px solid $first-color;
+							}
+
+							50% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+							75% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							100% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+						}
+					}
+
+					.level2 {
+						animation: level2 8s ease infinite normal backwards running;
+
+						@keyframes level2 {
+							0% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							25% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+							50% {
+								background-color: #f8e6e6;
+								border: 1px solid $first-color;
+							}
+
+							75% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							100% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+						}
+					}
+
+					.level3 {
+						animation: level3 8s ease infinite normal backwards running;
+
+						@keyframes level3 {
+							0% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							25% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+							50% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							75% {
+								background-color: #f8e6e6;
+								border: 1px solid $first-color;
+							}
+
+							100% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+						}
+					}
+
+					.level4 {
+						animation: level4 8s ease infinite normal backwards running;
+
+						@keyframes level4 {
+							0% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							25% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+							50% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+
+							75% {
+								background-color: $fourth-color;
+								border: 1px solid $sixth-color;
+							}
+							100% {
+								background-color: #f8e6e6;
+								border: 1px solid $first-color;
+							}
+						}
 					}
 				}
 			}
