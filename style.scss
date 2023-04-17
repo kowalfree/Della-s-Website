@@ -330,10 +330,8 @@ $eighth-color: green;
 			}
 
 			.divImg {
-				@media (min-width: 641px) {
-					eight: 100%;
-					width: 60%;
-				}
+				height: 100%;
+				width: 60%;
 
 				@media (max-width: 640px) {
 					width: 100%;
@@ -360,20 +358,18 @@ $eighth-color: green;
 			}
 
 			.aside {
-				@media (min-width: 641px) {
-					height: auto;
-					width: 40%;
-					background-color: $fifth-color;
-					animation: move2 2s linear;
+				height: auto;
+				width: 40%;
+				background-color: $fifth-color;
+				animation: move2 2s linear;
 
-					@keyframes move2 {
-						0% {
-							transform: translateX(-100%);
-						}
+				@keyframes move2 {
+					0% {
+						transform: translateX(-100%);
+					}
 
-						100% {
-							transform: translateX(0);
-						}
+					100% {
+						transform: translateX(0);
 					}
 				}
 				@media (max-width: 640px) {
@@ -1314,18 +1310,14 @@ $eighth-color: green;
 		&__contact {
 			margin-bottom: 50vh;
 
-			@media (landscape) and (max-width: 480px) {
-				margin-bottom: 32vh;
-			}
-
-			@media (portrait) and (max-width: 480px) {
-				margin-bottom: 35vh;
+			@media (max-width: 480px) {
+				margin-bottom: 280px;
 			}
 		}
 
 		.contact {
 			text-align: center;
-			width: 70%;
+			width: 80%;
 
 			@media (max-width: 480px) {
 				line-height: 1.8;

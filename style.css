@@ -324,11 +324,9 @@
     flex-direction: column-reverse;
   }
 }
-@media (min-width: 641px) {
-  .body .header .welcome .divImg {
-    eight: 100%;
-    width: 60%;
-  }
+.body .header .welcome .divImg {
+  height: 100%;
+  width: 60%;
 }
 @media (max-width: 640px) {
   .body .header .welcome .divImg {
@@ -352,20 +350,18 @@
     animation: move3 none;
   }
 }
-@media (min-width: 641px) {
-  .body .header .welcome .aside {
-    height: auto;
-    width: 40%;
-    background-color: #ffcc4d;
-    animation: move2 2s linear;
+.body .header .welcome .aside {
+  height: auto;
+  width: 40%;
+  background-color: #ffcc4d;
+  animation: move2 2s linear;
+}
+@keyframes move2 {
+  0% {
+    transform: translateX(-100%);
   }
-  @keyframes move2 {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  100% {
+    transform: translateX(0);
   }
 }
 @media (max-width: 640px) {
@@ -1316,19 +1312,14 @@
 .body .footer__contact {
   margin-bottom: 50vh;
 }
-@media (landscape) and (max-width: 480px) {
+@media (max-width: 480px) {
   .body .footer__contact {
-    margin-bottom: 32vh;
-  }
-}
-@media (portrait) and (max-width: 480px) {
-  .body .footer__contact {
-    margin-bottom: 35vh;
+    margin-bottom: 280px;
   }
 }
 .body .footer .contact {
   text-align: center;
-  width: 70%;
+  width: 80%;
 }
 @media (max-width: 480px) {
   .body .footer .contact {
