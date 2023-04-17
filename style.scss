@@ -1293,6 +1293,7 @@ $eighth-color: green;
 
 		&__h2 {
 			margin-top: 5vh;
+			margin-bottom: 5vh;
 		}
 
 		.footer-h2 {
@@ -1308,11 +1309,7 @@ $eighth-color: green;
 		}
 
 		&__contact {
-			margin-bottom: 50vh;
-
-			@media (max-width: 480px) {
-				margin-bottom: 280px;
-			}
+			margin-bottom: 65vh;
 		}
 
 		.contact {

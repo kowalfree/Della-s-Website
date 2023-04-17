@@ -1296,6 +1296,7 @@
 }
 .body .footer__h2 {
   margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .body .footer .footer-h2 {
   width: 50vw;
@@ -1310,12 +1311,7 @@
   }
 }
 .body .footer__contact {
-  margin-bottom: 50vh;
-}
-@media (max-width: 480px) {
-  .body .footer__contact {
-    margin-bottom: 280px;
-  }
+  margin-bottom: 65vh;
 }
 .body .footer .contact {
   text-align: center;
