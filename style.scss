@@ -31,7 +31,6 @@ $eighth-color: green;
 }
 
 .body {
-	max-width: 1920px;
 	//? Start-header
 
 	.header {
@@ -331,8 +330,10 @@ $eighth-color: green;
 			}
 
 			.divImg {
-				height: 100%;
-				width: 60%;
+				@media (min-width: 641px) {
+					eight: 100%;
+					width: 60%;
+				}
 
 				@media (max-width: 640px) {
 					width: 100%;
@@ -359,18 +360,20 @@ $eighth-color: green;
 			}
 
 			.aside {
-				height: auto;
-				width: 40%;
-				background-color: $fifth-color;
-				animation: move2 2s linear;
+				@media (min-width: 641px) {
+					height: auto;
+					width: 40%;
+					background-color: $fifth-color;
+					animation: move2 2s linear;
 
-				@keyframes move2 {
-					0% {
-						transform: translateX(-100%);
-					}
+					@keyframes move2 {
+						0% {
+							transform: translateX(-100%);
+						}
 
-					100% {
-						transform: translateX(0);
+						100% {
+							transform: translateX(0);
+						}
 					}
 				}
 				@media (max-width: 640px) {

@@ -16,8 +16,8 @@ const check = (input) => {
 
 const length = () => {
 	if (
-		(0 < name.value.length < 3 && name.value !== "") ||
-		(0 < text.value.length < 15 && text.value !== "")
+		(name.value.length < 3 && name.value !== "") ||
+		(text.value.length < 15 && text.value !== "")
 	) {
 		alert(`WPISAŁEŚ ZA MAŁĄ ILOŚĆ ZNAKÓW!`);
 	}
@@ -49,6 +49,8 @@ const checkMail = () => {
 				Subject: "Chinese Language",
 				Body: body,
 			}).then((message) => alert("WYSŁANO WIADOMOŚĆ"));
+		} else if (name.value === "" || text.value === "") {
+			alert("NIE WYSŁANO. WYPEŁNIJ WSZYSTKIE POLA!");
 		}
 	} else {
 		if (name.value === "" || mail.value === "" || text.value === "") {
