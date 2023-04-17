@@ -1174,31 +1174,22 @@ $eighth-color: green;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 105vh;
+			height: 600px;
 			background-image: url("pictures/secabout.jpg");
 			background-size: cover;
 			background-attachment: fixed;
 
-			@media (max-width: 640px) {
-				height: 120vw;
-			}
-			@media (max-width: 480px) {
-				height: 180vw;
-			}
 			.msg {
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
 				flex-wrap: nowrap;
-				height: 85vh;
+				height: 94%;
 				width: 60vw;
 				border-radius: 1px;
 
 				@media (max-width: 640px) {
 					width: 80vw;
-				}
-				@media (max-width: 480px) {
-					width: 90vw;
 				}
 
 				&__pos {
@@ -1293,7 +1284,7 @@ $eighth-color: green;
 
 		&__h2 {
 			margin-top: 5vh;
-			margin-bottom: 5vh;
+			margin-bottom: 6vh;
 		}
 
 		.footer-h2 {
@@ -1309,7 +1300,7 @@ $eighth-color: green;
 		}
 
 		&__contact {
-			margin-bottom: 65vh;
+			margin-bottom: 70vh;
 		}
 
 		.contact {
