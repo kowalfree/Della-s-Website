@@ -19,7 +19,7 @@ const length = () => {
 		(name.value.length < 3 && name.value !== "") ||
 		(text.value.length < 15 && text.value !== "")
 	) {
-		alert(`WPISAŁEŚ ZA MAŁĄ ILOŚĆ ZNAKÓW!`);
+		alert(`YOU HAVE ENTERED TOO FEW CHARACTERS!`);
 	}
 
 	const error = (input, min) => {
@@ -48,17 +48,17 @@ const checkMail = () => {
 				From: "your email",
 				Subject: "Chinese Language",
 				Body: body,
-			}).then((message) => alert("WYSŁANO WIADOMOŚĆ"));
+			}).then((message) => alert("MESSAGE SENT"));
 		} else if (name.value === "" || text.value === "") {
-			alert("NIE WYSŁANO. WYPEŁNIJ WSZYSTKIE POLA!");
+			alert("NOT SENT. FILL IN ALL FIELDS!");
 		}
 	} else {
 		if (name.value === "" || mail.value === "" || text.value === "") {
-			alert("NIE WYSŁANO. WYPEŁNIJ WSZYSTKIE POLA!");
+			alert("NOT SENT. FILL IN ALL FIELDS!");
 		}
 		if (mail.value !== "") {
 			mail.style.backgroundColor = "#fcdddffa";
-			alert(`EMAIL JEST NIEPOPRAWNY!`);
+			alert(`EMAIL IS INCORRECT!`);
 		}
 	}
 };

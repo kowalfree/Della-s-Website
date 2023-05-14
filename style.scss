@@ -9,7 +9,7 @@
 //!variables:
 $first-color: #e64855fa;
 $second-color: #f99d3a;
-$third-color: rgb(236, 236, 236);
+$third-color: rgb(228, 228, 228);
 $fourth-color: white;
 $fifth-color: #ffcc4d;
 $sixth-color: black;
@@ -32,7 +32,18 @@ $eighth-color: green;
 
 .body {
 	//? Start-header
+	overflow-x: hidden;
 
+	.hidden {
+		opacity: 0;
+		filter: blur(5px);
+		transition: all 1s;
+	}
+
+	.show {
+		opacity: 1;
+		filter: blur(0);
+	}
 	.header {
 		position: relative;
 
@@ -197,7 +208,7 @@ $eighth-color: green;
 					}
 
 					.divLang {
-						width: 200px;
+						width: 150px;
 						background-color: $first-color;
 						z-index: -1;
 						transition: 0.5s;
@@ -1175,7 +1186,7 @@ $eighth-color: green;
 			justify-content: center;
 			align-items: center;
 			height: 600px;
-			background-image: url("pictures/secabout.jpg");
+			background-image: url("pictures/mountain-3022906_1920.jpg");
 			background-size: cover;
 			background-attachment: fixed;
 
@@ -1278,12 +1289,16 @@ $eighth-color: green;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		height: 90vh;
-		background-size: cover;
-		background-image: url("pictures/footer.png");
+		height: 600px;
+		background-color: $third-color;
+		position: relative;
+
+		@media (max-width: 700px) {
+			height: 430px;
+		}
 
 		&__h2 {
-			margin-top: 5vh;
+			margin-top: 7vh;
 			margin-bottom: 6vh;
 		}
 
@@ -1331,6 +1346,12 @@ $eighth-color: green;
 			.call:first-child {
 				margin-left: 0;
 			}
+		}
+		.end {
+			background-color: $third-color;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
 		}
 	}
 }

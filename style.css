@@ -6,6 +6,18 @@
   scroll-behavior: smooth;
 }
 
+.body {
+  overflow-x: hidden;
+}
+.body .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+.body .show {
+  opacity: 1;
+  filter: blur(0);
+}
 .body .header {
   position: relative;
 }
@@ -194,7 +206,7 @@
   }
 }
 .body .header .nav .ul .langBtn .divLang {
-  width: 200px;
+  width: 150px;
   background-color: rgba(230, 72, 85, 0.9803921569);
   z-index: -1;
   transition: 0.5s;
@@ -474,7 +486,7 @@
   }
 }
 .body .main {
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(228, 228, 228);
 }
 .body .main .about {
   position: relative;
@@ -1181,7 +1193,7 @@
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-image: url("pictures/secabout.jpg");
+  background-image: url("pictures/mountain-3022906_1920.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1214,7 +1226,7 @@
   font-size: 12px;
   border-radius: 4px;
   border: none;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(228, 228, 228);
   color: black;
 }
 @media (max-width: 360px) {
@@ -1233,7 +1245,7 @@
   font-size: 12px;
   border-radius: 4px;
   border: none;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(228, 228, 228);
   color: black;
 }
 @media (max-width: 360px) {
@@ -1275,12 +1287,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background-size: cover;
-  background-image: url("pictures/footer.png");
+  height: 600px;
+  background-color: rgb(228, 228, 228);
+  position: relative;
+}
+@media (max-width: 700px) {
+  .body .footer {
+    height: 430px;
+  }
 }
 .body .footer__h2 {
-  margin-top: 5vh;
+  margin-top: 7vh;
   margin-bottom: 6vh;
 }
 .body .footer .footer-h2 {
@@ -1322,4 +1339,10 @@
 }
 .body .footer .contact .call:first-child {
   margin-left: 0;
+}
+.body .footer .end {
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */
