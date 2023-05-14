@@ -1308,13 +1308,9 @@
 .body .footer__contact {
 	margin-bottom: 60vh;
 }
-@media (max-width: 480px) {
-	.body .footer .contact {
-		margin-bottom: 20vh;
-	}
-}
+
 @media (max-width: 360px) {
-	.body .footer .contact {
+	.body .footer__contact {
 		margin-bottom: 10vh;
 	}
 }
