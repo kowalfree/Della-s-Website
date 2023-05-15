@@ -201,14 +201,14 @@ $eighth-color: green;
 						transform: translateX(100%);
 
 						@media (max-width: 640px) {
-							top: 96px;
+							top: 94px;
 							right: 50%;
 							transform: translate(50%, 0);
 						}
 					}
 
 					.divLang {
-						width: 164px;
+						width: 154;
 						background-color: $first-color;
 						z-index: -1;
 						transition: 0.5s;
@@ -221,7 +221,7 @@ $eighth-color: green;
 							list-style: none;
 
 							&__li {
-								padding: 12px 3px;
+								padding: 12px 5px;
 							}
 
 							.liLang {

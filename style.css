@@ -200,13 +200,13 @@
 }
 @media (max-width: 640px) {
   .body .header .nav .ul .langBtn__div {
-    top: 96px;
+    top: 94px;
     right: 50%;
     transform: translate(50%, 0);
   }
 }
 .body .header .nav .ul .langBtn .divLang {
-  width: 164px;
+  width: 154;
   background-color: rgba(230, 72, 85, 0.9803921569);
   z-index: -1;
   transition: 0.5s;
@@ -220,7 +220,7 @@
   list-style: none;
 }
 .body .header .nav .ul .langBtn .divLang .lang__li {
-  padding: 12px 3px;
+  padding: 12px 5px;
 }
 .body .header .nav .ul .langBtn .divLang .lang .liLang {
   font-size: 14px;
