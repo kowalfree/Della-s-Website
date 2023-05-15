@@ -55,6 +55,7 @@
 .body .header .nav .label {
 	display: none;
 	height: 100%;
+	width: -moz-fit-content;
 	width: fit-content;
 	text-align: center;
 }
@@ -205,7 +206,7 @@
 	}
 }
 .body .header .nav .ul .langBtn .divLang {
-	width: 150px;
+	width: 160px;
 	background-color: rgba(230, 72, 85, 0.9803921569);
 	z-index: -1;
 	transition: 0.5s;
@@ -219,7 +220,7 @@
 	list-style: none;
 }
 .body .header .nav .ul .langBtn .divLang .lang__li {
-	padding: 12px 0;
+	padding: 12px 5px;
 }
 .body .header .nav .ul .langBtn .divLang .lang .liLang {
 	font-size: 14px;
@@ -285,6 +286,7 @@
 .body .header .nav .ul .labelLang {
 	display: none;
 	height: 100%;
+	width: -moz-fit-content;
 	width: fit-content;
 }
 @media (max-width: 640px) {

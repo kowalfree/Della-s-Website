@@ -17,7 +17,6 @@
 }
 .body .header {
 	position: relative;
-	overflow-x: hidden;
 }
 .body .header__nav {
 	position: fixed;
@@ -116,7 +115,6 @@
 		background-color: rgba(230, 72, 85, 0.9803921569);
 		height: 250px;
 		width: 100%;
-		overflow: hidden;
 		border: 1px solid black;
 	}
 }
