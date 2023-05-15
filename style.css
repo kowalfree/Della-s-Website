@@ -206,7 +206,7 @@
   }
 }
 .body .header .nav .ul .langBtn .divLang {
-  width: 160px;
+  width: 164px;
   background-color: rgba(230, 72, 85, 0.9803921569);
   z-index: -1;
   transition: 0.5s;
@@ -220,11 +220,10 @@
   list-style: none;
 }
 .body .header .nav .ul .langBtn .divLang .lang__li {
-  padding: 12px 5px;
+  padding: 12px 3px;
 }
 .body .header .nav .ul .langBtn .divLang .lang .liLang {
   font-size: 14px;
-  margin: auto;
 }
 .body .header .nav .ul .langBtn .divLang .lang .liLang .linkFlag {
   display: flex;

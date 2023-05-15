@@ -208,7 +208,7 @@ $eighth-color: green;
 					}
 
 					.divLang {
-						width: 160px;
+						width: 164px;
 						background-color: $first-color;
 						z-index: -1;
 						transition: 0.5s;
@@ -221,12 +221,11 @@ $eighth-color: green;
 							list-style: none;
 
 							&__li {
-								padding: 12px 5px;
+								padding: 12px 3px;
 							}
 
 							.liLang {
 								font-size: 14px;
-								margin: auto;
 
 								.linkFlag {
 									display: flex;
